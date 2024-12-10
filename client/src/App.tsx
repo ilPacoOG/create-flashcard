@@ -44,8 +44,9 @@ function App() {
           <Outlet />
         </main>
         
-        {/* Footer */}
+        <div className='footer'>
         <Footer />
+        </div>
       </div>
     </ApolloProvider>
   );

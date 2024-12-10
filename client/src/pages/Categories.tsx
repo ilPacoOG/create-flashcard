@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar/Navbar.js";
+
 import CardList from "../components/CardList/CardList.js";
 
 import { QUERY_CARDS } from "../utils/queries.js";
@@ -10,9 +10,7 @@ const Categories = () => {
 
   return (
     <main className="categories-page">
-      <header>
-        <NavBar />
-      </header>
+     
 
       <section className="cards-section">
         {loading ? (
