@@ -7,17 +7,27 @@ import App from './App';
 import ErrorPage from './pages/ErrorPage';
 import Login from './pages/Login';
 import CreateFlashcardPage from './pages/CreateFlashcardForm';
+import SignUp from './pages/SignUp';
+import Home from './pages/Home';
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <App />, // App acts as the layout
+    path: "/",
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
         index: true,
-        element: <Login />,
+        element: <Home />
       },
+       {
+        path: '/signup',
+        element: <SignUp />
+       },
+       {
+        path: '/login',
+        element: <Login />
+       },
       {
         path: '/categories',
         element: <Categories />,
@@ -31,8 +41,8 @@ const router = createBrowserRouter([
         element: <Quiz />,
       },
       {
-        path: '/create-flashcard',  // Add this route
-        element: <CreateFlashcardPage />
+        path: '/create-flashcard', // Add this route
+        element: <CreateFlashcardPage />,
       },
     ],
   },
@@ -42,5 +52,3 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(<RouterProvider router={router} />);
 }
-
-
