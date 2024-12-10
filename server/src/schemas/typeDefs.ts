@@ -38,12 +38,13 @@ const typeDefs = `
     me: User
   }
 
-  type Mutation {
-    addUser(input: UserInput!): Auth
-    login(email: String!, password: String!): Auth
-    addCard(input: CardInput!): Card
-    removeCard(CardId: ID!): Card
-  }
+type Mutation {
+  addUser(input: UserInput!): Auth
+  login(email: String!, password: String!): Auth
+  addCard(input: CardInput!): Card
+  removeCard(cardId: ID!): Card # Updated "CardId" to "cardId"
+}
+
 `;
 
 export default typeDefs;
