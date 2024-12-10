@@ -46,3 +46,17 @@
 .card .back {
   background-color: #e9ecef
 }
+
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: darkred;
+}

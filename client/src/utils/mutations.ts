@@ -11,6 +11,14 @@ export const ADD_CARD = gql`
     }
   }
 `
+export const DELETE_CARD = gql`
+  mutation DeleteCard($cardId: ID!) {
+    removeCard(cardId: $cardId) {
+      _id
+    }
+  }
+`;
+
 
 export const LOGIN_USER = gql`
 mutation Login($email: String!, $password: String!) {

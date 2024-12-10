@@ -27,9 +27,10 @@ const RandomCard: React.FC = () => {
     <main>
       {currentCard && (
         <Card
-          question={currentCard.questionText}
-          answer={currentCard.answerText}
-        />
+        id={currentCard._id} // Add the id here
+        question={currentCard.questionText}
+        answer={currentCard.answerText}
+      />
       )}
       <button onClick={generateRandomCard}>Next</button>
     </main>
